@@ -18,5 +18,7 @@ class BookControllerTest {
 			.andExpect(MockMvcResultMatchers.status().isOk());
 		mockMvc.perform(MockMvcRequestBuilders.get("/books/123"))
 			.andExpect(MockMvcResultMatchers.status().isOk());
+		mockMvc.perform(MockMvcRequestBuilders.post("/books"))
+			.andExpect(MockMvcResultMatchers.status().isOk());
 	}
 }
